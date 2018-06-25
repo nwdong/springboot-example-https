@@ -21,11 +21,11 @@ mvn clean isstall
 mvn spring-boot:run
 ```
 ## send request through postman
-method: post
-url: https://localhost:8443/test
-headers: TARGET_FILE_NAME (httpstest.txt)
-body encode: text/plain
-body: test body
+- method: post
+- url: https://localhost:8443/test
+- headers: TARGET_FILE_NAME (httpstest.txt)
+- body encode: text/plain
+- body: test body
 
 Note, if can't get response, visit in browser firstly, then send request through postman again 
 ## result
