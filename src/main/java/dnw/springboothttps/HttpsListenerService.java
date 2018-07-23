@@ -17,8 +17,8 @@ public class HttpsListenerService {
 	 * @param fileName, the target file name
 	 * @return
 	 */
-	@RequestMapping(value = "/{inikey}", method= RequestMethod.POST, consumes="text/plain")
-	public String handleFile(@PathVariable("inikey") String iniKey, @RequestBody String payload, @RequestHeader(value="TARGET_FILE_NAME") String fileName) {
-		return iniKey + ":" + fileName + ":" + payload;
+	@RequestMapping(value = "/{urlpath}", method= RequestMethod.POST, consumes="text/plain")
+	public String handleFile(@PathVariable("urlpath") String urlpath, @RequestBody String reqBody, @RequestHeader(value="REQUEST_HEADER_TEST") String header) {
+		return urlpath + ":" + header + ":" + reqBody;
 	}
 }

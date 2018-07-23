@@ -12,7 +12,7 @@ keytool -genkeypair -keyalg rsa -keysize 2048 -alias https-example-key-alias -st
 
 # how to build
 ```
-mvn clean isstall
+mvn clean install
 ```
 
 # how to test
@@ -22,12 +22,12 @@ mvn spring-boot:run
 ```
 ## send request through postman
 method: post
-url: https://localhost:8443/test
-headers: TARGET_FILE_NAME (httpstest.txt)
+url: https://localhost:8443/mypath
+headers: REQUEST_HEADER_TEST (myRequestHeader)
 body encode: text/plain
-body: test body
+body: request body test
 
 Note, if can't get response, visit in browser firstly, then send request through postman again 
 ## result
-test:httpstest.txt:test body
+mypath:myRequestHeader:request body test
  
