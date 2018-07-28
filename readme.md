@@ -21,11 +21,11 @@ mvn clean install
 mvn spring-boot:run
 ```
 ## send request through postman
-method: post
-url: https://localhost:8443/mypath
-headers: REQUEST_HEADER_TEST (myRequestHeader)
-body encode: text/plain
-body: request body test
+- method: post
+- url: https://localhost:8443/mypath
+- headers: REQUEST_HEADER_TEST (myRequestHeader)
+- body encode: text/plain
+- body: request body test
 
 Note, if can't get response, visit in browser firstly, then send request through postman again 
 ## result
